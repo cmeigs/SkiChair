@@ -1,0 +1,7 @@
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Data.Interface\bin\Debug\Data.Interface.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Data.Interface\bin\Debug\Data.Interface.pdb
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Data.Interface\bin\Debug\Microsoft.Practices.CompositeWeb.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Data.Interface\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Data.Interface\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Data.Interface\obj\Debug\Data.Interface.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Data.Interface\obj\Debug\Data.Interface.pdb

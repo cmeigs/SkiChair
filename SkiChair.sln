@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSites", "WebSites", "{1E90B8C9-3D36-4C65-B467-0F43245749CB}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SkiChair", "WebSites\SkiChair\", "{2BD32255-B72A-4FE4-A14E-96ADAD8A629C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{700E7A14-F228-4CE7-B43A-FA90B8282179}|Shell.dll;{8954AE09-DD8C-4BE7-B6AB-2D63E4D6B003}|Merchandise.dll;{8768B2C7-76A2-4B95-ADDC-88C7F98C133C}|Data.dll;{4C5AF119-BE39-4551-B363-5ED7F6A19010}|FlickrMod.dll;{8856B07C-39CF-4BF1-8919-97DE30D1677D}|PhotoGallery.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/SkiChair"
+		Debug.AspNetCompiler.PhysicalPath = "WebSites\SkiChair\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SkiChair\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/SkiChair"
+		Release.AspNetCompiler.PhysicalPath = "WebSites\SkiChair\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\SkiChair\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49836"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{DC52405D-3AC5-4C25-9C22-18C4E0C3739C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shell", "Modules\Shell\Shell.csproj", "{700E7A14-F228-4CE7-B43A-FA90B8282179}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merchandise", "Merchandise\Merchandise.csproj", "{8954AE09-DD8C-4BE7-B6AB-2D63E4D6B003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{8768B2C7-76A2-4B95-ADDC-88C7F98C133C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlickrMod", "Flickr\FlickrMod.csproj", "{4C5AF119-BE39-4551-B363-5ED7F6A19010}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoGallery", "PhotoGallery\PhotoGallery.csproj", "{8856B07C-39CF-4BF1-8919-97DE30D1677D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BD32255-B72A-4FE4-A14E-96ADAD8A629C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD32255-B72A-4FE4-A14E-96ADAD8A629C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD32255-B72A-4FE4-A14E-96ADAD8A629C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD32255-B72A-4FE4-A14E-96ADAD8A629C}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{700E7A14-F228-4CE7-B43A-FA90B8282179}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{700E7A14-F228-4CE7-B43A-FA90B8282179}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{700E7A14-F228-4CE7-B43A-FA90B8282179}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{700E7A14-F228-4CE7-B43A-FA90B8282179}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8954AE09-DD8C-4BE7-B6AB-2D63E4D6B003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8954AE09-DD8C-4BE7-B6AB-2D63E4D6B003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8954AE09-DD8C-4BE7-B6AB-2D63E4D6B003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8954AE09-DD8C-4BE7-B6AB-2D63E4D6B003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8768B2C7-76A2-4B95-ADDC-88C7F98C133C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8768B2C7-76A2-4B95-ADDC-88C7F98C133C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8768B2C7-76A2-4B95-ADDC-88C7F98C133C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8768B2C7-76A2-4B95-ADDC-88C7F98C133C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C5AF119-BE39-4551-B363-5ED7F6A19010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C5AF119-BE39-4551-B363-5ED7F6A19010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C5AF119-BE39-4551-B363-5ED7F6A19010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C5AF119-BE39-4551-B363-5ED7F6A19010}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8856B07C-39CF-4BF1-8919-97DE30D1677D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8856B07C-39CF-4BF1-8919-97DE30D1677D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8856B07C-39CF-4BF1-8919-97DE30D1677D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8856B07C-39CF-4BF1-8919-97DE30D1677D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2BD32255-B72A-4FE4-A14E-96ADAD8A629C} = {1E90B8C9-3D36-4C65-B467-0F43245749CB}
+		{700E7A14-F228-4CE7-B43A-FA90B8282179} = {DC52405D-3AC5-4C25-9C22-18C4E0C3739C}
+		{8954AE09-DD8C-4BE7-B6AB-2D63E4D6B003} = {DC52405D-3AC5-4C25-9C22-18C4E0C3739C}
+		{8768B2C7-76A2-4B95-ADDC-88C7F98C133C} = {DC52405D-3AC5-4C25-9C22-18C4E0C3739C}
+		{4C5AF119-BE39-4551-B363-5ED7F6A19010} = {DC52405D-3AC5-4C25-9C22-18C4E0C3739C}
+		{8856B07C-39CF-4BF1-8919-97DE30D1677D} = {DC52405D-3AC5-4C25-9C22-18C4E0C3739C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		IsWCSFSolution = True
+		RootNamespace = SkiChair
+	EndGlobalSection
+EndGlobal

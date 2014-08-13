@@ -1,0 +1,139 @@
+/*
+body {
+	font: Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0;
+	width: 1024px;
+	background-color:#000;
+	border: solid 1px #231f20;
+}
+*/
+h1 {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 0;
+	padding-left: 15px;
+	margin: 100 px;
+	color: #000;
+	font-size: 18px;
+	text-transform:uppercase;
+	text-align: left;
+}
+
+h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 0;
+	padding-bottom: 15px;
+	margin: 100 px;
+	color: #000;
+	font-size: 12px;
+	text-align: left;
+}
+
+a:link {  color: #fcee21; text-decoration: none; font-weight: bold;}
+a:visited {  color: #fff; text-decoration: none; font-weight: bold;}
+a:hover {  font-weight: bold; text-decoration:underline; }
+
+.fltrt {
+	float: right;
+	margin-left:0;
+	text-align:center;
+	background-color:#000;
+	color: #fff;
+	text-align:center;
+	font-size: 12px;
+	font: Arial, Helvetica, sans-serif;
+	vertical-align: top;
+}
+
+.PageHeader{
+	font: Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	background-color: #231f20;
+	font-size: 24px;
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-bottom:15px;
+	padding-top:15px;
+	margin: 100 px;
+	text-align: left;
+	
+}
+.clearfloat {
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+#content-inner {
+  background-color: clear;
+  padding: 9px 10px 27px 10px;
+}
+
+/* Product Page Header */
+.ProductPageHead {
+	background-image:url('../../images/Page_Header.png'); 
+	height:80px; 
+	width:765px;
+	text-align: left;
+	float: left;
+}
+
+/* Cross Sell Buttons */
+.GolfButton {
+	background-image: url('../../images/xsell/GolfChair_Button.jpg');
+}
+.HockeyButton {
+	background-image: url('../../images/xsell/HockeyBench_Button.jpg');
+}
+.SkateBoardButton {
+	background-image: url('../../images/xsell/SkateBoardBench_Button.jpg');
+}
+.SnowSkiBenchButton {
+	background: transparent url('../../images/xsell/SnowSkiBench_Button.jpg') no-repeat center top;
+}
+.SnowSkiChairButton {
+	background: transparent url('../../images/xsell/SnowSkiChair_Button.jpg') no-repeat center top;
+}
+.WaterSkiBenchButton {
+	background: transparent url('../../images/xsell/WaterSkiBench_Button.jpg') no-repeat center top;
+}
+.WaterSkiChairButton {
+	background: transparent url('../../images/xsell/WaterSkiChair_Button.jpg') no-repeat center top;
+}
+.SnowBoardBenchButton {
+	background: transparent url('../../images/xsell/SnowBoardBench_Button.jpg') no-repeat center top;
+}
+.SnowBoardChairButton {
+	background: transparent url('../../images/xsell/SnowBoardChair_Button.jpg') no-repeat center top;
+}
+.WakeBoardBenchButton {
+	background-image: url('../../images/xsell/WakeBoardBench_Button.jpg');
+}
+.WakeBoardChairButton {
+	background-image: url('../../images/xsell/WakeBoardChair_Button.jpg');
+}
+.WineButton {
+	background-image: url('../../images/xsell/SnowSkiWineRack_Button.jpg');
+}
+.CoatRackButton {
+	background-image: url('../../images/xsell/SnowSkiCoatRack_Button.jpg');
+}
+.WoodKitButton 	{
+	background-image: url('../../images/xsell/WoodKit_Button.jpg');
+}
+.BenchLegsButton {
+	background-image: url('../../images/xsell/BenchLegs_Button.jpg');
+/*	cursor: pointer; /* hand-shaped cursor */
+/*	cursor: hand; /* for IE 5.x */
+/*	margin: 1px 0px 1px 0px;
+	font-size: 25px;
+	font-weight: bolder; */
+}

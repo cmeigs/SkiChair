@@ -1,0 +1,35 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="Shared_temp, App_Web_buqlozfz" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    
+    <style type="text/css">
+        body { background-color:#ff9900; }
+    </style>
+
+    <asp:ContentPlaceHolder id="HeaderContent" runat="server"></asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+      <Scripts>
+        <asp:ScriptReference Path="js/jquery-1.4.2.min.js" />
+      </Scripts>
+    </asp:ScriptManager>
+    
+    <div>
+    
+        From Master Page
+        <br />
+        <asp:ContentPlaceHolder id="DefaultContent" runat="server">
+        </asp:ContentPlaceHolder>
+    
+    </div>
+    </form>
+</body>
+</html>

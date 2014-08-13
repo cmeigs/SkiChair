@@ -1,0 +1,70 @@
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Merchandise.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Merchandise.pdb
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Data.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\FlickrMod.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Microsoft.Practices.CompositeWeb.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Microsoft.Practices.CompositeWeb.EnterpriseLibrary.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Shell.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\FlickrNet.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Shell.pdb
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Data.pdb
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\FlickrNet.pdb
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\FlickrNet.xml
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\bin\Debug\FlickrMod.pdb
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\obj\Debug\Merchandise.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Product\obj\Debug\Merchandise.pdb
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Merchandise.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Merchandise.pdb
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Data.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\FlickrMod.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.CompositeWeb.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.CompositeWeb.EnterpriseLibrary.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Shell.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\FlickrNet.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Shell.pdb
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Data.pdb
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\FlickrNet.pdb
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\FlickrNet.xml
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\FlickrMod.pdb
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\obj\Debug\Merchandise.dll
+C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\obj\Debug\Merchandise.pdb
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Merchandise.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Merchandise.pdb
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Data.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\FlickrMod.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.CompositeWeb.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.CompositeWeb.EnterpriseLibrary.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Shell.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\FlickrNet.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Shell.pdb
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Data.pdb
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\bin\Debug\FlickrMod.pdb
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\obj\Debug\Merchandise.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Merchandise\obj\Debug\Merchandise.pdb

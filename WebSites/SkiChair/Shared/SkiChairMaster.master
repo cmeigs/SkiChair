@@ -1,0 +1,89 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SkiChairMaster.master.cs" Inherits="SkiChair.Shell.MasterPages.SkiChairMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register TagPrefix="SkiChair" TagName="Menu" Src="~/Shared/SkiChairMenu.ascx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head id="Head" runat="server">
+    <title>SkiChair.com :: Play in Style, Rest in Style</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="KEYWORDS" content="SkiChair.com, recycled furniture, skis, snowboards, wakeboards, wine racks, Adirondack chairs, rocking chairs" />
+    <meta name="DESCRIPTION" content="SkiChair.com products reflect the passion and lifestyle of outdoor enthusiasts in their relaxation. SkiChair.com manufactures recycled sports furniture such as Adirondack chairs, benches and swings, by recycling blemished and used sports equipment." />
+
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server"></asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2989715-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+
+<body>
+    <form id="mainForm" runat="server">
+    <asp:ToolkitScriptManager ID="DefaultMasterScriptManager" runat="server"></asp:ToolkitScriptManager>
+        
+    <div id="container">
+        <div id="container-inner">
+            
+            <div id="header">
+                <div id="header-inner">
+                    <div id="header-blocks">SkiChair.com products reflect the passion and lifestyle of outdoor enthusiasts in their relaxation. We manufacture <i>recycled</i> sports furniture such as Adirondack chairs, benches and swings, by recycling blemished and used sports equipment.</div>
+                    <div id="logo"><a href="/"><asp:Image ID="imgSkiChairLogo" ImageUrl="~/images/SkiChair_Logo.png" runat="server" /></a></div>
+                    <div class="clearfix"></div>
+                </div> <!-- header-inner -->
+            </div> <!-- header -->
+            
+            <!-- main menu -->
+            <div class="mainmenu">
+                <SkiChair:Menu ID="ucMenu" runat="server" />
+            </div>   
+            <div class="clearfix"></div>
+            
+            <!-- main -->
+            <div id="main">
+                <div id="main-inner">
+                    <div id="content">
+                        <div id="content-inner">
+                            <div class='front-content'>
+                                <asp:ContentPlaceHolder ID="DefaultContent" runat="server" />
+		                    </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            
+            
+            <!-- footer -->
+            <div id="footer">
+                <div id="footer-inner">
+                    <p class="links">
+                        <asp:LinkButton ID="LinkButton1" PostBackUrl="~/MissionStatement.aspx" class="white" runat="server" Text="Our Mission" /> | 
+                        <asp:LinkButton ID="LinkButton2" PostBackUrl="~/Recycle.aspx" class="white" runat="server" Text="Recycle Commitment" /> | 
+                        <asp:LinkButton ID="LinkButton3" PostBackUrl="~/Merchandise/WoodKitPlans.aspx" class="white" runat="server" Text="Ski Kits" /> | 
+                        <asp:LinkButton ID="LinkButton4" PostBackUrl="~/Guarantee.aspx" class="white" runat="server" Text="100% Comfort Guarantee" /> | 
+                        <asp:LinkButton ID="LinkButton5" PostBackUrl="~/TurnaroundTime.aspx" class="white" runat="server" Text="2-Week Turnaround, 5-Year Guarantee" />
+                    </p>
+                    <p class="address">
+                    4 Abbot Place | Millbury, Massachusetts 01527 | 508-335-2202 | 508-752-5997 | mbellino@skichair.com</p>
+                    <p class="credits">Design By: <a href="http://www.skiskisonproductions.com/" target="_blank">SkiSkiSon Productions</a> | Developed By: <a href="http://www.webgigz.com/" target="_blank">WebGigz</a></p>
+                </div>
+            </div>
+            <!-- end footer -->
+
+        </div>
+    </div>
+        
+    </form>
+</body>
+</html>
