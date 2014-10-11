@@ -51,18 +51,24 @@ namespace SkiChair.Merchandise.Views
             }
         }
 
-        
+
         private void CreateInventoryEmail(string inventoryText)
         {
-            SmtpClient client = new SmtpClient(ConfigurationManager.AppSettings["SMTPHost"]);
-            MailAddress from = new MailAddress("info@skichair.com");
-            MailAddress to = new MailAddress(ConfigurationManager.AppSettings["OrderFormEmail"]);
-            MailMessage message = new MailMessage(from, to);
-            message.Body = "SkiChair Product Order " + DateTime.Now + Environment.NewLine + Environment.NewLine + inventoryText;
-            message.BodyEncoding =  System.Text.Encoding.UTF8;
-            message.Subject = "SkiChair Order";
-            message.SubjectEncoding = System.Text.Encoding.UTF8;
-            client.Send(message);
+            try
+            {
+                SmtpClient client = new SmtpClient(ConfigurationManager.AppSettings["SMTPHost"]);
+                MailAddress from = new MailAddress("info@skichair.com");
+                MailAddress to = new MailAddress(ConfigurationManager.AppSettings["OrderFormEmail"]);
+                MailMessage message = new MailMessage(from, to);
+                message.Body = "SkiChair Product Order " + DateTime.Now + Environment.NewLine + Environment.NewLine + inventoryText;
+                message.BodyEncoding = System.Text.Encoding.UTF8;
+                message.Subject = "SkiChair Order";
+                message.SubjectEncoding = System.Text.Encoding.UTF8;
+                client.Send(message);
+            }
+            catch
+            {
+            }
         }
 
 

@@ -59,6 +59,10 @@ namespace SkiChair.Merchandise.Views
                         TotalPrice += Convert.ToDecimal(ConfigurationManager.AppSettings.Get("OttomanPrice"));
                 }
                 lblPrice.Text = TotalPrice.ToString("c");
+
+                // set paypal session amount for processing within App_Code/paypalfunctions.cs
+                Session["payment_amt"] = TotalPrice;
+
                 InventoryText = InventoryText.Substring(0, InventoryText.Length - 2); //drop last two digits of product string
             }
             else
@@ -70,12 +74,24 @@ namespace SkiChair.Merchandise.Views
             }
 
             //add FirstData postbackurl to submit button from config file
-            btnSubmit.PostBackUrl = ConfigurationManager.AppSettings.Get("FirstDataURL");
+            //btnSubmit.PostBackUrl = ConfigurationManager.AppSettings.Get("FirstDataURL");
+            //btnSubmit.PostBackUrl = ConfigurationManager.AppSettings.Get("PayPalEndpointURL");
+            Response.Redirect("expresscheckout.aspx");
 
             //add store name to form for FirstData from config file
             spanStoreName.InnerHtml = "<input type='hidden' name='storename' value='" + ConfigurationManager.AppSettings.Get("FirstDataStoreNumber") + "' />";
 
             lblInventory.Text = InventoryText;
+/*
+<form name="_xclick" action="https://www.paypal.com/us/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="me@mybusiness.com">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="item_name" value="Teddy Bear">
+<input type="hidden" name="amount" value="12.99">
+<input type="image" src="http://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+</form>
+*/ 
         }
 
 

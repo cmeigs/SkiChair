@@ -209,7 +209,8 @@
 	                                </tr>
                                     <tr>
                                         <td colspan="3">
-                                            <asp:Button ID="btnSubmit" Text="Continue to Secure Payment Form" runat="server" />
+                                            <asp:Button ID="btnSubmit" Text="Continue to Secure Payment Form" 
+                                                runat="server" />
                                         </td>
                                     </tr>
                                 </table>
