@@ -14,8 +14,8 @@ using System.Web;
 public class NVPAPICaller
 {
     //private static readonly ILog log = LogManager.GetLogger(typeof(NVPAPICaller));
-	
-    private string pendpointurl = "https://api-3t.paypal.com/nvp";
+
+    private string pendpointurl = "https://api-3t.paypal.com/nvp";  //classic API?
     private const string CVV2 = "CVV2";
 
     //Flag that determines the PayPal environment (live or sandbox)
@@ -62,14 +62,17 @@ public class NVPAPICaller
         amt = Math.Round(Convert.ToDecimal(amt), 2).ToString();
 
 		string host = "www.paypal.com";
-		if (bSandbox)
+        string returnURL = "http://skichair.com/merchandise/doexpresscheckout.aspx";
+        string cancelURL = "http://skichair.com";
+        
+        if (bSandbox)
 		{
 			pendpointurl = "https://api-3t.sandbox.paypal.com/nvp";
 			host = "www.sandbox.paypal.com";
+            returnURL = "http://localhost:49836/SkiChair/Merchandise/DoExpressCheckout.aspx";
+            cancelURL = "http://localhost:49836/";
 		}
 		
-        string returnURL = "http://skichair.com/merchandise/ordersuccess.aspx";
-        string cancelURL = "http://skichair.com";
         NVPCodec encoder = new NVPCodec();
         encoder["USER"] = APIUsername;
         encoder["PWD"] = APIPassword;
@@ -103,7 +106,7 @@ public class NVPAPICaller
         if (strAck != null && (strAck == "success" || strAck == "successwithwarning"))
         {
             token = decoder["TOKEN"];
-
+            
             string ECURL = "https://" + host + "/cgi-bin/webscr?cmd=_express-checkout" + "&token=" + token;
 
             retMsg = ECURL;
@@ -120,8 +123,7 @@ public class NVPAPICaller
     }
 
     /// <summary>
-    /// MarkExpressCheckout: The method that calls SetExpressCheckout API, invoked from the 
-    /// Billing Page EC placement
+    /// MarkExpressCheckout: The method that calls SetExpressCheckout API, invoked from the Billing Page EC placement
     /// </summary>
     /// <param name="amt"></param>
     /// <param ref name="token"></param>
@@ -133,14 +135,17 @@ public class NVPAPICaller
                         string shipToCountryCode,ref string token, ref string retMsg)
     {
 		string host = "www.paypal.com";
-		if (bSandbox)
-		{
-			pendpointurl = "https://api-3t.sandbox.paypal.com/nvp";
-			host = "www.sandbox.paypal.com";
-		}
-
-        string returnURL = "http://skichair.com/merchandise/ordersuccess.aspx";
+        string returnURL = "http://skichair.com/Merchandise/DoExpressCheckout.aspx";
         string cancelURL = "http://skichair.com";
+
+        if (bSandbox)
+        {
+            pendpointurl = "https://api-3t.sandbox.paypal.com/nvp";
+            host = "www.sandbox.paypal.com";
+            returnURL = "http://localhost:49836/SkiChair/Merchandise/DoExpressCheckout.aspx";
+            cancelURL = "http://localhost:49836/";
+        }
+
 
         NVPCodec encoder = new NVPCodec();
         encoder["METHOD"] = "SetExpressCheckout";
@@ -254,15 +259,15 @@ public class NVPAPICaller
 		{
 			pendpointurl = "https://api-3t.sandbox.paypal.com/nvp";
 		}
-		
+
         NVPCodec encoder = new NVPCodec();
         encoder["METHOD"] = "DoExpressCheckoutPayment";
         encoder["TOKEN"] = token;
-        encoder["PAYMENTREQUEST_0_PAYMENTACTION"] = "Order";
         encoder["PAYERID"] = PayerId;
         encoder["PAYMENTREQUEST_0_AMT"] = finalPaymentAmount;
-		encoder["PAYMENTREQUEST_0_CURRENCYCODE"] = "USD";
-
+        encoder["PAYMENTREQUEST_0_PAYMENTACTION"] = "Order";
+        encoder["PAYMENTREQUEST_0_CURRENCYCODE"] = "USD";
+		
         string pStrrequestforNvp = encoder.Encode();
         string pStresponsenvp = HttpCall(pStrrequestforNvp);
 
