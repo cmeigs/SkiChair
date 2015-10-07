@@ -38,6 +38,11 @@ namespace SkiChair.Merchandise.Views
             View.ProductInventory.PhotographInfo = GetFlickrPhotographByImageUID(View.FlickrImageID);
         }
 
+        public decimal GetShippingByProductUID(int productUID)
+        {
+            return _controller.GetShippingByProductUID(productUID);
+        }
+
 
     }
 }

@@ -35,7 +35,14 @@
         <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="#FFFFFF" />
         <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
     </asp:GridView>
-    
-    <asp:Button id="btnCheckOut" Text="Check Out" PostBackUrl="~/Merchandise/CheckOut.aspx" runat="server" />
+    <br />
+    <asp:Label ID="lblPhoneNumber" Text="Phone Number (Required)" runat="server"></asp:Label>
+    <asp:TextBox ID="txtPhoneNumber" runat="server"></asp:TextBox>
+    <br />
+    <br />
+    <asp:Button id="btnCheckOut" OnClick="btnCheckout_OnClick" Text="Check Out" runat="server" />
+    <!--
+    Shopping Cart is not working at this time, please call The Chair Man at 508-335-2202 or email order to mbellino@resourcetp.com
+    -->
         
 </asp:Content>

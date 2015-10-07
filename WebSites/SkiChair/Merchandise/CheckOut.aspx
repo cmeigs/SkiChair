@@ -129,14 +129,32 @@
 		                                <td align="right">Comments / <br />Different Ship Address:</td>
 		                                <td><asp:TextBox ID="txtComments" runat="server" Rows="4" TextMode="MultiLine" class="required" /></td>
 	                                </tr>
+                                    <tr><td>&nbsp;</td></tr>
 	                                <tr>
+	                                    <td colspan="2">
+	                                        <b>Credit Card Information:</b>
+	                                    </td>
+	                                </tr>
+	                                <tr>
+		                                <td align="right">Credit Card Number:</td>
+		                                <td><asp:TextBox ID="txtCreditCardNumb" runat="server" /></td>
+	                                </tr>
+	                                <tr>
+		                                <td align="right">Expiration Date:</td>
+		                                <td><asp:TextBox ID="txtExpDate" runat="server" /></td>
+	                                </tr>
+	                                <tr>
+		                                <td align="right">CCV:</td>
+		                                <td><asp:TextBox ID="txtCCV" runat="server" /></td>
+	                                </tr>
+                                    <tr>
 	                                    <td colspan="2">
 	                                        <asp:Label ID="lblPersonalInfoFeedback" Font-Bold="true" ForeColor="Red" runat="server"></asp:Label>
 	                                    </td>
 	                                </tr>
 	                                <tr>
 	                                    <td>&nbsp;</td>
-	                                    <td><asp:Button ID="btnPersonalInfoSubmit" Text="Continue" runat="server" OnClick="btnPersonalInfoSubmit_Click" /></td>
+	                                    <td><asp:Button ID="btnPersonalInfoSubmit" Text="Continue/Verify" runat="server" OnClick="btnPersonalInfoSubmit_Click" /></td>
 	                                </tr>
 	                            </table>
                                 </asp:Panel>
@@ -207,10 +225,36 @@
                                             <asp:Literal id="litComments" runat="server" />		                                    
 		                                </td>
 	                                </tr>
+	                                <tr><td>&nbsp;</td></tr>
+	                                <tr>
+	                                    <td colspan="2">
+	                                        <b>Credit Card Information:</b>
+	                                    </td>
+	                                </tr>
+	                                <tr>
+	                                    <td align="right">Credit Card Number:</td>
+		                                <td>
+                                            <span id="spanCCNumb" runat="server"></span>
+                                            <asp:Literal id="litCCNumb" runat="server" />		                                    
+		                                </td>
+	                                </tr>
+	                                <tr>
+	                                    <td align="right">Expiration Date:</td>
+		                                <td>
+                                            <span id="spanExpDate" runat="server"></span>
+                                            <asp:Literal id="litExpDate" runat="server" />		                                    
+		                                </td>
+	                                </tr>
+	                                <tr>
+	                                    <td align="right">CCV:</td>
+		                                <td>
+                                            <span id="spanCCV" runat="server"></span>
+                                            <asp:Literal id="litCCV" runat="server" />		                                    
+		                                </td>
+	                                </tr>
                                     <tr>
                                         <td colspan="3">
-                                            <asp:Button ID="btnSubmit" Text="Continue to Secure Payment Form" 
-                                                runat="server" />
+                                            <asp:Button ID="btnCheckout" Text="Checkout" runat="server" OnClick="btnCheckout_OnClick" />
                                         </td>
                                     </tr>
                                 </table>

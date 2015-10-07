@@ -38,7 +38,6 @@ C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\PhotoGallery\bin\De
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\PhotoGallery\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\PhotoGallery\bin\Debug\Shell.dll
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\PhotoGallery\bin\Debug\Data.pdb
-C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\PhotoGallery\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\PhotoGallery\bin\Debug\Shell.pdb
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\PhotoGallery\bin\Debug\FlickrMod.pdb
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\PhotoGallery\obj\Debug\ResolveAssemblyReference.cache

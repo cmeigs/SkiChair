@@ -23,7 +23,6 @@ C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Data\bin\Debug\Micr
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.dll
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Data\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
-C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Data\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Data\obj\Debug\Data.dll
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Data\obj\Debug\Data.pdb

@@ -23,6 +23,7 @@ C:\Users\Jessup Fuller\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\obj
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\bin\Debug\FlickrMod.dll
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\bin\Debug\FlickrMod.pdb
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\bin\Debug\Data.dll
+C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\bin\Debug\FlickrNet.dll
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\bin\Debug\Microsoft.Practices.CompositeWeb.dll
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\bin\Debug\Microsoft.Practices.CompositeWeb.EnterpriseLibrary.dll
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
@@ -35,8 +36,6 @@ C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\bin\Debug\Sh
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\bin\Debug\Shell.pdb
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\bin\Debug\Data.pdb
-C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\obj\Debug\FlickrMod.dll
 C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\obj\Debug\FlickrMod.pdb
-C:\Users\Gary\Documents\Visual Studio 2008\Projects\SkiChair\Flickr\bin\Debug\FlickrNet.dll

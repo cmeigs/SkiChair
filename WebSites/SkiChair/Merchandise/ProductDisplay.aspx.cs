@@ -108,6 +108,9 @@ namespace SkiChair.Merchandise.Views
             //if chair includes ottoman, specify in Inventory object
             ProductInventory.HasOttoman = (chkOttoman.Checked) ? true : false;
 
+            if (!ProductInventory.InventoryName.ToLower().Contains("plans") && !ProductInventory.InventoryName.ToLower().Contains("screw"))
+                ProductInventory.Shipping = _presenter.GetShippingByProductUID(ProductInventory.ProductUID);
+
             if (Session["ShoppingCart"] == null)
             {
                 inventoryList.Add(ProductInventory);

@@ -98,6 +98,20 @@ namespace SkiChair.Merchandise.Views
         }
 
 
+        protected void btnCheckout_OnClick(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtPhoneNumber.Text))
+            {
+                lblFeedback.Text = "Phone Number is Required";
+            }
+            else
+            {
+                lblFeedback.Text = "";
+                Session["PhoneNumber"] = txtPhoneNumber.Text;
+                Response.Redirect("~/Merchandise/CheckOut.aspx"); 
+            }
+        }
+
     }
 }
 

@@ -7,6 +7,8 @@ using System.Text;
 using System.Data;
 using System.Configuration;
 using System.Web;
+using System.Collections.Generic;
+using SkiChair.Data.Entities;
 
 /// <summary>
 /// Summary description for NVPAPICaller
@@ -56,10 +58,15 @@ public class NVPAPICaller
     /// <param ref name="token"></param>
     /// <param ref name="retMsg"></param>
     /// <returns></returns>
-    public bool ShortcutExpressCheckout(string amt, ref string token, ref string retMsg)
+    public bool ShortcutExpressCheckout(ref string token, ref string retMsg)
     {
+        decimal totalAmount = 0;
+        List<Inventory> inventoryList = (List<Inventory>)HttpContext.Current.Session["ShoppingCart"];
+
         // round amount to 2 decimal places
-        amt = Math.Round(Convert.ToDecimal(amt), 2).ToString();
+        //amt = Math.Round(Convert.ToDecimal(amt), 2).ToString();
+        //shipping = Math.Round(Convert.ToDecimal(shipping), 2).ToString();
+        //string totalAmt = Math.Round(Convert.ToDecimal(amt) + Convert.ToDecimal(shipping), 2).ToString();
 
 		string host = "www.paypal.com";
         string returnURL = "http://skichair.com/merchandise/doexpresscheckout.aspx";
@@ -80,11 +87,20 @@ public class NVPAPICaller
         encoder["METHOD"] = "SetExpressCheckout";
         encoder["RETURNURL"] = returnURL;
         encoder["CANCELURL"] = cancelURL;
-        encoder["PAYMENTREQUEST_0_PAYMENTACTION"] = "Order";
-        encoder["PAYMENTREQUEST_0_CURRENCYCODE"] = "USD";
-        encoder["PAYMENTREQUEST_0_AMT"] = amt;
-        encoder["TOTALORDER"] = amt;
-        //encoder["PAYMENTREQUEST_0_ITEMAMT"] = amt;
+
+        int index = 0;
+        foreach (Inventory inv in inventoryList)
+        {
+            encoder["PAYMENTREQUEST_" + index + "_PAYMENTACTION"] = "Order";
+            encoder["PAYMENTREQUEST_" + index + "_CURRENCYCODE"] = "USD";
+            encoder["PAYMENTREQUEST_" + index + "_AMT"] = Math.Round(inv.Price, 2).ToString();
+            encoder["PAYMENTREQUEST_" + index + "_SHIPPINGAMT"] = Math.Round(inv.Shipping, 2).ToString();
+            encoder["PAYMENTREQUEST_" + index + "_DESC"] = inv.InventoryName;
+            encoder["PAYMENTREQUEST_" + index + "_ITEMAMT"] = Math.Round(inv.Price, 2).ToString();
+            totalAmount += inv.Price + inv.Shipping;
+            index++;
+        }
+        encoder["TOTALORDER"] = Math.Round(totalAmount, 2).ToString();
         /*
         encoder["L_PAYMENTREQUEST_0_NAME0"] = "Test SkiChair";
         encoder["L_PAYMENTREQUEST_0_QTY0"] = "1";
@@ -253,7 +269,7 @@ public class NVPAPICaller
     /// <param name="token"></param>
     /// <param ref name="retMsg"></param>
     /// <returns></returns>
-    public bool ConfirmPayment(string finalPaymentAmount, string token, string PayerId, ref NVPCodec decoder, ref string retMsg )
+    public bool ConfirmPayment(string finalPaymentAmount, string productDescription, string token, string PayerId, ref NVPCodec decoder, ref string retMsg )
     {
 		if (bSandbox)
 		{
@@ -267,7 +283,9 @@ public class NVPAPICaller
         encoder["PAYMENTREQUEST_0_AMT"] = finalPaymentAmount;
         encoder["PAYMENTREQUEST_0_PAYMENTACTION"] = "Order";
         encoder["PAYMENTREQUEST_0_CURRENCYCODE"] = "USD";
-		
+        encoder["PAYMENTREQUEST_0_DESC"] = productDescription;
+        encoder["TOTALORDER"] = finalPaymentAmount;
+
         string pStrrequestforNvp = encoder.Encode();
         string pStresponsenvp = HttpCall(pStrrequestforNvp);
 

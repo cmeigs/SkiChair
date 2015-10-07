@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Net.Mail;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI;
@@ -61,9 +62,15 @@ namespace SkiChair.Merchandise.Views
                 lblPrice.Text = TotalPrice.ToString("c");
 
                 // set paypal session amount for processing within App_Code/paypalfunctions.cs
+                decimal shipping = 0;
+                decimal tax = 0;
+                CalculateTaxShipping(ref shipping, ref tax);
                 Session["payment_amt"] = TotalPrice;
+                Session["shipping_amt"] = shipping;
 
                 InventoryText = InventoryText.Substring(0, InventoryText.Length - 2); //drop last two digits of product string
+                Session["product_description"] = InventoryText;
+
             }
             else
             {
@@ -76,22 +83,12 @@ namespace SkiChair.Merchandise.Views
             //add FirstData postbackurl to submit button from config file
             //btnSubmit.PostBackUrl = ConfigurationManager.AppSettings.Get("FirstDataURL");
             //btnSubmit.PostBackUrl = ConfigurationManager.AppSettings.Get("PayPalEndpointURL");
-            Response.Redirect("expresscheckout.aspx");
+            //Response.Redirect("expresscheckout.aspx");
 
             //add store name to form for FirstData from config file
-            spanStoreName.InnerHtml = "<input type='hidden' name='storename' value='" + ConfigurationManager.AppSettings.Get("FirstDataStoreNumber") + "' />";
+            //spanStoreName.InnerHtml = "<input type='hidden' name='storename' value='" + ConfigurationManager.AppSettings.Get("FirstDataStoreNumber") + "' />";
 
             lblInventory.Text = InventoryText;
-/*
-<form name="_xclick" action="https://www.paypal.com/us/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="me@mybusiness.com">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="item_name" value="Teddy Bear">
-<input type="hidden" name="amount" value="12.99">
-<input type="image" src="http://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-</form>
-*/ 
         }
 
 
@@ -113,12 +110,12 @@ namespace SkiChair.Merchandise.Views
         }
 
 
-        private void CalculateTaxShipping()
+        private void CalculateTaxShipping(ref decimal shipping, ref decimal tax)
         {
             decimal chargeTotal = 0;
             decimal subTotal = 0;
-            decimal tax = 0;
-            decimal shipping = 0;
+            //decimal tax = 0;
+            //decimal shipping = 0;
 
             //calculate tax (only for MA)
             if (ddlState.SelectedValue == "MA")
@@ -176,7 +173,9 @@ namespace SkiChair.Merchandise.Views
 
         protected void ddlState_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CalculateTaxShipping();
+            decimal shipping = 0;
+            decimal tax = 0;
+            CalculateTaxShipping(ref shipping, ref tax);
             spanState.InnerHtml = "<input type='hidden' name='bstate' value='" + ddlState.SelectedValue.ToString() + "' />";
             litState.Text = ddlState.SelectedItem.Text;
             
@@ -251,6 +250,32 @@ namespace SkiChair.Merchandise.Views
         }
 
 
+        protected void btnCheckout_OnClick(object sender, EventArgs e)
+        {
+            MailMessage eMail = new MailMessage();
+            eMail.To.Add(ConfigurationManager.AppSettings["OrderFormEmail"]);
+            eMail.Subject = "SkiChair.com Order";
+            eMail.Body = DateTime.Now + "<br>" +
+                "Product(s): " + Session["product_description"] + "<br>" +
+                "Payment Amount: " + Session["payment_amt"] + "<br>" +
+                "Shipping Amount: " + Session["shipping_amt"] + "<br>" +
+                "Name: " + txtFullName.Text + "<br>" +
+                "Shipping: " + txtAddress.Text + " " + txtCity.Text + " " + ddlState.Text + " " + txtZipCode.Text + "<br>" +
+                "Phone: " + txtPhone.Text + "<br>" +
+                "Email: " + txtEmail.Text + "<br>" +
+                "Credit Card Number: " + txtCreditCardNumb.Text + "<br>" +
+                "Expiration Date: " + txtExpDate.Text + "<br>" +
+                "CCV: " + txtCCV.Text;
+            eMail.From = new MailAddress(txtEmail.Text, txtFullName.Text);
+            eMail.IsBodyHtml = true;
+
+            SmtpClient smtp = new SmtpClient(ConfigurationManager.AppSettings["SMTPHost"]);
+            smtp.Send(eMail);
+
+            Response.Redirect("OrderSuccess.aspx");
+        }
+
+
         protected void btnPersonalInfoSubmit_Click(object sender, EventArgs e)
         {
             bool isValid = true;
@@ -280,7 +305,22 @@ namespace SkiChair.Merchandise.Views
                 lblPersonalInfoFeedback.Text += "Phone Number is a required field, please fill it out before continuing<br />";
                 isValid = false;
             }
-
+            if (string.IsNullOrEmpty(txtCreditCardNumb.Text))
+            {
+                lblPersonalInfoFeedback.Text += "Credit Card Number is a required field, please fill it out before continuing<br />";
+                isValid = false;
+            }
+            if (string.IsNullOrEmpty(txtExpDate.Text))
+            {
+                lblPersonalInfoFeedback.Text += "Credit Card Expiration Date is a required field, please fill it out before continuing<br />";
+                isValid = false;
+            }
+            if (string.IsNullOrEmpty(txtCCV.Text))
+            {
+                lblPersonalInfoFeedback.Text += "CCV is a required field, please fill it out before continuing<br />";
+                isValid = false;
+            }            
+            
             //if form is valid, populate FirstData static hidden HTML controls
             if (isValid)
             {
@@ -291,6 +331,7 @@ namespace SkiChair.Merchandise.Views
                 spanPhone.InnerHtml = "<input type='hidden' name='phone' value='" + txtPhone.Text + "' />";
                 spanEmail.InnerHtml = "<input type='hidden' name='email' value='" + txtEmail.Text + "' />";
                 spanComments.InnerHtml = "<input type='hidden' name='comments' value='" + InventoryText + ", User Comments: " + txtComments.Text + "' />";
+                //spanCCNumb
 
                 litName.Text = txtFullName.Text;
                 litAddress.Text = txtAddress.Text;
@@ -299,6 +340,9 @@ namespace SkiChair.Merchandise.Views
                 litPhone.Text = txtPhone.Text;
                 litEmail.Text = txtEmail.Text;
                 litComments.Text = txtComments.Text;
+                litCCNumb.Text = txtCreditCardNumb.Text;
+                litExpDate.Text = txtExpDate.Text;
+                litCCV.Text = txtCCV.Text;
 
                 pnlPersonalInfoRequired.Visible = false;
                 pnlPersonalInfo.Visible = true;

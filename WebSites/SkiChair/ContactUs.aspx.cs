@@ -15,21 +15,30 @@ public partial class ContactUs : System.Web.UI.Page
 
     protected void btnContactMe_Click(object sender, System.EventArgs e)
     {
-        MailMessage eMail = new MailMessage();
-        eMail.To.Add(ConfigurationManager.AppSettings["SMTPEmail"]);
-        if (txtSubject.Text == "")
-            eMail.Subject = "SkiChair.com Inquiry";
-        else
-            eMail.Subject = txtSubject.Text;
-        eMail.Body = DateTime.Now + " - Contact us from SkiChair.com <br /><br />" + txtMessage.Text;
-        eMail.From = new MailAddress(txtEmail.Text, txtName.Text);
-        eMail.IsBodyHtml = true;
+        try
+        {
+            MailMessage eMail = new MailMessage();
+            eMail.To.Add(ConfigurationManager.AppSettings["SMTPEmail"]);
+            if (txtSubject.Text == "")
+                eMail.Subject = "SkiChair.com Inquiry";
+            else
+                eMail.Subject = txtSubject.Text;
+            eMail.Body = DateTime.Now + " - Contact us from SkiChair.com <br /><br />" + txtMessage.Text;
+            eMail.From = new MailAddress(txtEmail.Text, txtName.Text);
+            eMail.IsBodyHtml = true;
 
-        SmtpClient smtp = new SmtpClient(ConfigurationManager.AppSettings["SMTPHost"]);
-        smtp.Send(eMail);
+            SmtpClient smtp = new SmtpClient(ConfigurationManager.AppSettings["SMTPHost"]);
+            smtp.Send(eMail);
 
-        panelSendEmail.Visible = false;
-        panelMailSent.Visible = true;
+            panelSendEmail.Visible = false;
+            panelMailSent.Visible = true;
+        }
+        catch (Exception ex)
+        {
+            panelSendEmail.Visible = false;
+            panelMailSent.Visible = false;
+            panelError.Visible = true;
+        }
     }
 
 }

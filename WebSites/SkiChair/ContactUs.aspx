@@ -61,5 +61,10 @@
 		</tr>
 	</table>
 </asp:panel>
+<asp:panel id="panelError" runat="server" Visible="False">
+Error sending email, please contact The Chair Man at:
+<br />
+508-335-2202 or 508-752-5997 
+</asp:panel>
 </asp:Content>
 

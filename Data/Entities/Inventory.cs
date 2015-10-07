@@ -30,6 +30,7 @@ namespace SkiChair.Data.Entities
         private string _inventoryname;
         private string _description;
         private decimal _price;
+        private decimal _shipping;
         private DateTime _createdate;
         private string _flickrimageuid;
         private bool _isactive;
@@ -60,6 +61,11 @@ namespace SkiChair.Data.Entities
         {
             get { return _price; }
             set { _price = value; }
+        }
+        public decimal Shipping
+        {
+            get { return _shipping; }
+            set { _shipping = value; }
         }
         public DateTime CreateDate
         {
