@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Net;
 using System.Net.Mail;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
@@ -252,27 +253,51 @@ namespace SkiChair.Merchandise.Views
 
         protected void btnCheckout_OnClick(object sender, EventArgs e)
         {
-            MailMessage eMail = new MailMessage();
-            eMail.To.Add(ConfigurationManager.AppSettings["OrderFormEmail"]);
-            eMail.Subject = "SkiChair.com Order";
-            eMail.Body = DateTime.Now + "<br>" +
-                "Product(s): " + Session["product_description"] + "<br>" +
-                "Payment Amount: " + Session["payment_amt"] + "<br>" +
-                "Shipping Amount: " + Session["shipping_amt"] + "<br>" +
-                "Name: " + txtFullName.Text + "<br>" +
-                "Shipping: " + txtAddress.Text + " " + txtCity.Text + " " + ddlState.Text + " " + txtZipCode.Text + "<br>" +
-                "Phone: " + txtPhone.Text + "<br>" +
-                "Email: " + txtEmail.Text + "<br>" +
-                "Credit Card Number: " + txtCreditCardNumb.Text + "<br>" +
-                "Expiration Date: " + txtExpDate.Text + "<br>" +
-                "CCV: " + txtCCV.Text;
-            eMail.From = new MailAddress(txtEmail.Text, txtFullName.Text);
-            eMail.IsBodyHtml = true;
+            try
+            {
+                MailMessage eMail = new MailMessage();
+                eMail.To.Add(ConfigurationManager.AppSettings["OrderFormEmail"]);
+                eMail.From = new MailAddress("postmaster@skichair.com");
+                eMail.Subject = "SkiChair.com Order";
+                eMail.Body = DateTime.Now + "<br>" +
+                    "Product(s): " + Session["product_description"] + "<br>" +
+                    "Payment Amount: " + Session["payment_amt"] + "<br>" +
+                    "Shipping Amount: " + Session["shipping_amt"] + "<br><br>" +
+                    "Name: " + txtFullName.Text + "<br>" +
+                    "Billing: " + txtAddress.Text + " " + txtCity.Text + " " + ddlState.Text + " " + txtZipCode.Text + "<br>" +
+                    "Phone: " + txtPhone.Text + "<br>" +
+                    "Email: " + txtEmail.Text + "<br>" +
+                    "Notes/Shipping: " + txtComments.Text + "<br><br>" +
+                    "Credit Card Number: " + txtCreditCardNumb.Text + "<br>" +
+                    "Expiration Date: " + txtExpDate.Text + "<br>" +
+                    "Billing Zip: " + txtZipCode.Text + "<br>" +
+                    "CCV: " + txtCCV.Text;
+                eMail.IsBodyHtml = true;
 
-            SmtpClient smtp = new SmtpClient(ConfigurationManager.AppSettings["SMTPHost"]);
-            smtp.Send(eMail);
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = ConfigurationManager.AppSettings["SMTPHost"];
+                smtp.UseDefaultCredentials = false;
 
-            Response.Redirect("OrderSuccess.aspx");
+                NetworkCredential basicCredential = new NetworkCredential("postmaster@skichair.com", "PostM@ster10");
+                smtp.Credentials = basicCredential;
+
+                try
+                {
+                    smtp.Send(eMail);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Exception caught in CreateMessageWithAttachment(): {0}", ex.ToString());
+                }
+
+
+
+                Response.Redirect("OrderSuccess.aspx");
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
 

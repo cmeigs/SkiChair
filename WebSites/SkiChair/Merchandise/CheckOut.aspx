@@ -164,7 +164,7 @@
                                 <table border="0">    	    
 	                                <tr>
 	                                    <td colspan="2">
-	                                        <b>Personal Information:</b>
+	                                        <b>Billing Information:</b>
 	                                        &nbsp;&nbsp;&nbsp;
 	                                        <asp:LinkButton ID="btnEditInfo" runat="server" Text="Edit Info" OnClick="btnEditInfo_Click" ForeColor="Black"></asp:LinkButton>
 	                                    </td>
@@ -219,7 +219,7 @@
 		                                </td>
 	                                </tr>
 	                                <tr>
-		                                <td align="right">Comments / Different Ship Address:</td>
+		                                <td align="right">Different Shipping Address / Comments:</td>
 		                                <td>
 		                                    <span id="spanComments" runat="server" />
                                             <asp:Literal id="litComments" runat="server" />		                                    
